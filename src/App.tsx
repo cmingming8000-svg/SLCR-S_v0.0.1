@@ -32,7 +32,7 @@ const vehicles = [
   { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/ef23c72b-3a84-48ed-8957-017307751863/_result.png' },
   { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/b2c710ea-2a20-47f4-b20c-2e3e6ebe7850/_result.png' },
   { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/27ab7cc3-3b72-4446-b108-6973509d895b/_result.png' },
-  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace / Mitsubishi L300', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/779e0a58-36bd-4526-9963-58dcaed174e1/_result.png' },
+  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace / Mitsubishi L300', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/0b66fd16-89b4-489a-b655-17b238d8acdf/_result.png' },
 ];
 
 const DRIVER_FEE = 100;
