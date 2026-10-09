@@ -342,3 +342,104 @@ body {
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  .hero-gradient {
+    min-height: auto !important;
+  }
+  
+  .modern-card-static {
+    border-radius: 16px;
+  }
+  
+  .modern-card {
+    border-radius: 16px;
+  }
+  
+  .btn-primary {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+  
+  /* Calendar mobile - horizontal scroll */
+  .calendar-mobile-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .calendar-mobile-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .calendar-mobile-scroll > .grid {
+    min-width: 500px;
+  }
+}
+
+/* Safe area for notched phones */
+@supports (padding: max(0px)) {
+  .safe-top {
+    padding-top: max(0px, env(safe-area-inset-top));
+  }
+  
+  .safe-bottom {
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+  button, a, input, select {
+    min-height: 44px;
+  }
+  
+  .nav-button {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+}
+
+/* Prevent zoom on iOS input focus */
+@supports (-webkit-touch-callout: none) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Mobile-optimized vehicle grid */
+@media (max-width: 640px) {
+  .vehicle-grid-mobile {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  
+  .vehicle-grid-mobile > div {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .vehicle-grid-mobile {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Responsive stat cards */
+@media (max-width: 640px) {
+  .stat-grid-mobile {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .stat-grid-mobile > div:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* Mobile price display */
+@media (max-width: 640px) {
+  .price-mobile {
+    font-size: 2rem !important;
+  }
+}

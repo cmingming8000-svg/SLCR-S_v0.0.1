@@ -29,10 +29,10 @@ interface Booking {
 
 // ==================== VEHICLE DATA ====================
 const vehicles = [
-  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/6d219663-426a-4bbd-b391-76df2c235d4a/_result.png' },
-  { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/a0f8054a-ce1e-4c96-932c-23ac6018dadd/_result.png' },
-  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/1ca5a39f-ab8d-4d93-a244-bc6ec99131bb/_result.png' },
-  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/be0764bb-cc39-4a74-8da3-f4e1ae5f469f/_result.png' },
+  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/ef23c72b-3a84-48ed-8957-017307751863/_result.png' },
+  { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/b2c710ea-2a20-47f4-b20c-2e3e6ebe7850/_result.png' },
+  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/27ab7cc3-3b72-4446-b108-6973509d895b/_result.png' },
+  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/f1b8c47f-092c-4c43-91a3-059a8a4d1557/_result.png' },
 ];
 
 const DRIVER_FEE = 100;
@@ -87,10 +87,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f8fafc] font-sans antialiased">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'glass py-3' : 'bg-transparent py-5'
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-top ${
+        scrolled ? 'glass py-2.5 sm:py-3' : 'bg-transparent py-3 sm:py-5'
       }`}>
-        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
@@ -161,7 +161,7 @@ export default function App() {
       {activeTab < 2 && <HeroSection />}
 
       {/* Tab Content */}
-      <main className={`max-w-7xl mx-auto px-5 sm:px-8 ${activeTab < 2 ? 'pt-12 pb-16' : 'pt-28 pb-16'}`}>
+      <main className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${activeTab < 2 ? 'pt-8 sm:pt-12 pb-12 sm:pb-16' : 'pt-24 sm:pt-28 pb-12 sm:pb-16'}`}>
         {activeTab === 0 && <CarRentalForm onSubmit={addBooking} />}
         {activeTab === 1 && <CarpoolForm onSubmit={addBooking} />}
         {activeTab === 2 && (
@@ -174,10 +174,10 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-navy-950 text-white/60 pt-16 pb-8 noise-overlay">
+      <footer className="bg-navy-950 text-white/60 pt-12 sm:pt-16 pb-8 noise-overlay safe-bottom">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-            <div className="md:col-span-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
+            <div className="sm:col-span-2 md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
                   <Car className="w-5 h-5 text-navy-900" strokeWidth={2.5} />
@@ -204,16 +204,16 @@ export default function App() {
             <div>
               <h4 className="text-white font-semibold text-sm mb-4">Contact</h4>
               <ul className="space-y-2.5 text-sm">
-                <li className="flex items-center gap-2"><Phone className="w-3.5 h-3.5 text-amber-400" /> +63 917 XXX XXXX</li>
-                <li className="flex items-center gap-2"><MapPin className="w-3.5 h-3.5 text-amber-400" /> San Pablo City, Laguna</li>
-                <li className="flex items-center gap-2"><Clock className="w-3.5 h-3.5 text-amber-400" /> 24/7 Available</li>
+                <li className="flex items-center gap-2"><Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" /> +63 917 XXX XXXX</li>
+                <li className="flex items-center gap-2"><MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" /> San Pablo City, Laguna</li>
+                <li className="flex items-center gap-2"><Clock className="w-3.5 h-3.5 text-amber-400 shrink-0" /> 24/7 Available</li>
               </ul>
             </div>
           </div>
           <div className="section-divider mb-6" />
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs">© 2026 Seven Lakes Car Rental. All rights reserved.</p>
-            <div className="flex items-center gap-6 text-xs">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-center sm:text-left">© 2026 Seven Lakes Car Rental. All rights reserved.</p>
+            <div className="flex items-center gap-4 sm:gap-6 text-xs flex-wrap justify-center">
               <span className="hover:text-amber-400 transition-colors cursor-pointer">Privacy Policy</span>
               <span className="hover:text-amber-400 transition-colors cursor-pointer">Terms of Service</span>
               <span className="hover:text-amber-400 transition-colors cursor-pointer">FAQ</span>
@@ -228,7 +228,7 @@ export default function App() {
 // ==================== HERO SECTION ====================
 function HeroSection() {
   return (
-    <section className="hero-gradient relative overflow-hidden min-h-[600px] flex items-center noise-overlay">
+    <section className="hero-gradient relative overflow-hidden min-h-[500px] sm:min-h-[600px] flex items-center noise-overlay">
       {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 -left-20 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl animate-float" />
@@ -241,7 +241,7 @@ function HeroSection() {
         }} />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 py-24 md:py-32 w-full">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 pt-28 pb-16 sm:pt-32 sm:pb-20 md:py-32 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">
@@ -251,7 +251,7 @@ function HeroSection() {
               <span className="text-amber-400/90 text-xs font-medium tracking-wide">SOUTH LUZON'S #1 CAR RENTAL</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Drive Your
               <br />
               <span className="gradient-text">Journey</span>
@@ -290,15 +290,15 @@ function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="flex items-center justify-center lg:justify-start gap-8 mt-12 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8 mt-10 sm:mt-12 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
               {[
                 { value: '500+', label: 'Happy Clients' },
                 { value: '4.9', label: 'Rating' },
                 { value: '24/7', label: 'Support' },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
-                  <p className="text-2xl font-black text-white">{stat.value}</p>
-                  <p className="text-xs text-white/40 font-medium">{stat.label}</p>
+                  <p className="text-xl sm:text-2xl font-black text-white">{stat.value}</p>
+                  <p className="text-[10px] sm:text-xs text-white/40 font-medium">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -522,7 +522,7 @@ function CarRentalForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'statu
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid vehicle-grid-mobile grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {vehicles.map((v) => (
               <button
                 key={v.id}
@@ -569,29 +569,29 @@ function CarRentalForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'statu
 
         {/* Selected Vehicle Preview */}
         <div className="modern-card-static overflow-hidden">
-          <div className="relative h-52 md:h-64 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 overflow-hidden">
+          <div className="relative h-48 sm:h-52 md:h-64 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 overflow-hidden">
             <img
               src={vehicle.image}
               alt={vehicle.model}
               className="w-full h-full object-cover opacity-80"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent" />
-            <div className="absolute bottom-5 left-6 right-6 flex items-end justify-between">
-              <div>
-                <p className="text-amber-400 text-xs font-semibold tracking-wider mb-1">SELECTED VEHICLE</p>
-                <p className="text-white text-3xl font-black tracking-tight">{vehicle.name}</p>
-                <p className="text-white/60 text-sm">{vehicle.model}</p>
+            <div className="absolute bottom-4 sm:bottom-5 left-4 sm:left-6 right-4 sm:right-6 flex items-end justify-between gap-3">
+              <div className="min-w-0">
+                <p className="text-amber-400 text-[10px] sm:text-xs font-semibold tracking-wider mb-1">SELECTED VEHICLE</p>
+                <p className="text-white text-xl sm:text-2xl md:text-3xl font-black tracking-tight truncate">{vehicle.name}</p>
+                <p className="text-white/60 text-xs sm:text-sm truncate">{vehicle.model}</p>
               </div>
-              <div className="text-right">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-5 py-3">
-                  <p className="text-amber-400 font-black text-3xl leading-none">₱{vehicle.rate}</p>
-                  <p className="text-white/50 text-xs font-medium">per hour</p>
+              <div className="text-right shrink-0">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl sm:rounded-2xl px-3 sm:px-5 py-2 sm:py-3">
+                  <p className="text-amber-400 font-black text-xl sm:text-2xl md:text-3xl leading-none">₱{vehicle.rate}</p>
+                  <p className="text-white/50 text-[10px] sm:text-xs font-medium">per hour</p>
                 </div>
               </div>
             </div>
           </div>
           {/* Specs bar */}
-          <div className="grid grid-cols-4 divide-x divide-gray-100 bg-white">
+          <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-gray-100 bg-white">
             {[
               { icon: Users, label: 'Seats', value: `${vehicle.seats} pax` },
               { icon: Gauge, label: 'Trans', value: vehicle.transmission },
@@ -734,10 +734,10 @@ function CarRentalForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'statu
                   <span className="text-white font-bold">₱{(DRIVER_FEE * formData.hours).toLocaleString()}</span>
                 </div>
               )}
-              <div className="flex justify-between items-center pt-2">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pt-2">
                 <span className="text-white/60 font-medium">Total Estimated Cost</span>
-                <div className="text-right">
-                  <p className="text-4xl font-black gradient-text">₱{totalPrice.toLocaleString()}</p>
+                <div className="text-right sm:text-right">
+                  <p className="text-3xl sm:text-4xl font-black gradient-text price-mobile">₱{totalPrice.toLocaleString()}</p>
                 </div>
               </div>
             </div>
@@ -907,15 +907,15 @@ function CarpoolForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'status'
               </div>
               <h3 className="font-bold text-white text-lg">How Carpool Works</h3>
             </div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
               {[
                 { step: '01', text: 'Submit travel details' },
                 { step: '02', text: 'Get matched with rides' },
                 { step: '03', text: 'Share the cost' },
               ].map((item, i) => (
                 <div key={i} className="text-center">
-                  <p className="text-amber-400 font-black text-lg mb-1">{item.step}</p>
-                  <p className="text-white/60 text-xs">{item.text}</p>
+                  <p className="text-amber-400 font-black text-base sm:text-lg mb-1">{item.step}</p>
+                  <p className="text-white/60 text-[10px] sm:text-xs leading-tight">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -1125,7 +1125,7 @@ function AdminDashboard({
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid stat-grid-mobile grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
         <StatCard label="Total" value={stats.total} icon={BarChart3} gradient="from-navy-900 to-navy-700" textColor="text-white" />
         <StatCard label="Pending" value={stats.pending} icon={Clock} gradient="from-yellow-400 to-amber-500" textColor="text-navy-900" />
         <StatCard label="Confirmed" value={stats.confirmed} icon={CheckCircle2} gradient="from-green-400 to-emerald-500" textColor="text-white" />
@@ -1166,13 +1166,13 @@ function AdminDashboard({
         </div>
 
         {viewMode === 'calendar' ? (
-          <div>
+          <div className="calendar-mobile-scroll">
             <div className="grid grid-cols-7 gap-1 mb-2">
               {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => (
                 <div key={d} className="text-center text-[11px] font-bold text-gray-400 uppercase tracking-wider py-2">{d}</div>
               ))}
             </div>
-            <div className="grid grid-cols-7 gap-1.5">
+            <div className="grid grid-cols-7 gap-1.5 min-w-[500px]">
               {calendarDays.map((day, i) => {
                 const dayBookings = day ? getBookingsForDay(day) : [];
                 return (
@@ -1267,9 +1267,9 @@ function AdminDashboard({
               <p className="text-xs text-gray-500">Track and manage all reservations</p>
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
             {Object.entries(statusDots).map(([status, color]) => (
-              <span key={status} className="flex items-center gap-1.5 text-[11px] font-medium text-gray-500">
+              <span key={status} className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-medium text-gray-500">
                 <span className={`w-2 h-2 rounded-full ${color}`} />
                 {status}
               </span>
@@ -1319,10 +1319,10 @@ function AdminDashboard({
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 ml-5 lg:ml-0">
+                <div className="flex items-center gap-1.5 sm:gap-2 ml-5 lg:ml-0">
                   <button
                     onClick={() => setSelectedBooking(booking)}
-                    className="p-2.5 rounded-xl hover:bg-gray-100 text-gray-400 hover:text-navy-900 transition-all"
+                    className="p-2 sm:p-2.5 rounded-xl hover:bg-gray-100 text-gray-400 hover:text-navy-900 transition-all"
                     title="View Details"
                   >
                     <Eye className="w-4 h-4" />
@@ -1331,18 +1331,18 @@ function AdminDashboard({
                     <select
                       value={booking.status}
                       onChange={e => onUpdateStatus(booking.id, e.target.value as Booking['status'])}
-                      className="text-xs border border-gray-200 rounded-xl px-3 py-2 pr-8 focus:ring-2 focus:ring-amber-400/20 focus:border-amber-400 outline-none appearance-none bg-white font-medium cursor-pointer"
+                      className="text-[11px] sm:text-xs border border-gray-200 rounded-lg sm:rounded-xl px-2 sm:px-3 py-2 pr-6 sm:pr-8 focus:ring-2 focus:ring-amber-400/20 focus:border-amber-400 outline-none appearance-none bg-white font-medium cursor-pointer"
                     >
                       <option value="Pending">Pending</option>
                       <option value="Confirmed">Confirmed</option>
                       <option value="Cancelled">Cancelled</option>
                       <option value="No-Show">No-Show</option>
                     </select>
-                    <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-400 pointer-events-none" />
+                    <ChevronDown className="absolute right-2 sm:right-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-400 pointer-events-none" />
                   </div>
                   <button
                     onClick={() => onDelete(booking.id)}
-                    className="p-2.5 rounded-xl hover:bg-red-50 text-gray-400 hover:text-red-500 transition-all"
+                    className="p-2 sm:p-2.5 rounded-xl hover:bg-red-50 text-gray-400 hover:text-red-500 transition-all"
                     title="Delete"
                   >
                     <Trash2 className="w-4 h-4" />
