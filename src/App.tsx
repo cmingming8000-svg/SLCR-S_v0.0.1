@@ -29,10 +29,10 @@ interface Booking {
 
 // ==================== VEHICLE DATA ====================
 const vehicles = [
-  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/ef23c72b-3a84-48ed-8957-017307751863/_result.png' },
-  { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/b2c710ea-2a20-47f4-b20c-2e3e6ebe7850/_result.png' },
-  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/27ab7cc3-3b72-4446-b108-6973509d895b/_result.png' },
-  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/f1b8c47f-092c-4c43-91a3-059a8a4d1557/_result.png' },
+  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage (Cool Silver)', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/ef23c72b-3a84-48ed-8957-017307751863/_result.png' },
+  { id: 'suv', name: 'SUV', model: 'Toyota Avanza (Black)', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/b2c710ea-2a20-47f4-b20c-2e3e6ebe7850/_result.png' },
+  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max (Bronze)', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/27ab7cc3-3b72-4446-b108-6973509d895b/_result.png' },
+  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace / Mitsubishi L300 (White)', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/f1b8c47f-092c-4c43-91a3-059a8a4d1557/_result.png' },
 ];
 
 const DRIVER_FEE = 100;
@@ -188,7 +188,7 @@ export default function App() {
                 </div>
               </div>
               <p className="text-sm leading-relaxed max-w-md">
-                Your trusted mobility partner in South Luzon. We provide reliable car rental and carpool services with a focus on safety, comfort, and customer satisfaction.
+                Serving Laguna, Batangas, Cavite & South Luzon. We provide reliable car rental and carpool services with a focus on safety, comfort, and customer satisfaction. <span className="text-amber-400/80 font-medium">Driven by trust.</span>
               </p>
             </div>
             <div>
@@ -252,21 +252,21 @@ function HeroSection() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Drive Your
+              Your Ride.
               <br />
-              <span className="gradient-text">Journey</span>
+              <span className="gradient-text">Your Way.</span>
             </h1>
 
             <p className="text-white/60 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Your trusted mobility partner in South Luzon. <span className="text-amber-400 font-medium">Driven by trust, ready for every journey.</span>
+              Serving Laguna, Batangas, Cavite & South Luzon. <span className="text-amber-400 font-medium">Driven by trust.</span>
             </p>
 
             {/* Service pills */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 mb-10 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               {[
-                { icon: Clock, text: 'Daily & Long-Term' },
+                { icon: Clock, text: 'Daily, Weekly & Long-Term' },
                 { icon: Car, text: 'Self-Drive / With Driver' },
-                { icon: Plane, text: 'Airport Transfers' },
+                { icon: Plane, text: 'Airport Transfers (NAIA/Clark)' },
                 { icon: Compass, text: 'Tour Packages' },
               ].map((badge, i) => (
                 <div key={i} className="pill glass-dark text-white/80 hover:text-white hover:bg-white/10 cursor-default">
@@ -292,8 +292,8 @@ function HeroSection() {
             {/* Stats */}
             <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8 mt-10 sm:mt-12 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
               {[
-                { value: '500+', label: 'Happy Clients' },
-                { value: '4.9', label: 'Rating' },
+                { value: '300+', label: 'Happy Clients' },
+                { value: '5★', label: 'Rating' },
                 { value: '24/7', label: 'Support' },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
