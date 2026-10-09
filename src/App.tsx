@@ -29,10 +29,10 @@ interface Booking {
 
 // ==================== VEHICLE DATA ====================
 const vehicles = [
-  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage (Cool Silver)', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/ef23c72b-3a84-48ed-8957-017307751863/_result.png' },
-  { id: 'suv', name: 'SUV', model: 'Toyota Avanza (Black)', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/b2c710ea-2a20-47f4-b20c-2e3e6ebe7850/_result.png' },
-  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max (Bronze)', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/27ab7cc3-3b72-4446-b108-6973509d895b/_result.png' },
-  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace / Mitsubishi L300 (White)', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/f1b8c47f-092c-4c43-91a3-059a8a4d1557/_result.png' },
+  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/ef23c72b-3a84-48ed-8957-017307751863/_result.png' },
+  { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/b2c710ea-2a20-47f4-b20c-2e3e6ebe7850/_result.png' },
+  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/27ab7cc3-3b72-4446-b108-6973509d895b/_result.png' },
+  { id: 'van', name: 'Van (High Roof)', model: 'Toyota Hiace / Mitsubishi L300', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/bf32efdb-52f4-40bb-9432-e55a8372f73d/_result.png' },
 ];
 
 const DRIVER_FEE = 100;
