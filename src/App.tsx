@@ -176,8 +176,14 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-navy-950 text-white/60 pt-12 sm:pt-16 pb-8 noise-overlay safe-bottom">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+      <footer className="relative footer-lake-gradient text-white/60 pt-12 sm:pt-16 pb-8 noise-overlay safe-bottom overflow-hidden">
+        {/* Subtle landscape silhouette in footer */}
+        <div className="absolute bottom-0 left-0 right-0 opacity-[0.04] pointer-events-none">
+          <svg viewBox="0 0 1440 200" className="w-full h-auto" preserveAspectRatio="none">
+            <path fill="rgba(255,255,255,0.5)" d="M0,160L60,144C120,128,240,96,360,90.7C480,85,600,112,720,122.7C840,133,960,128,1080,117.3C1200,107,1320,91,1380,82.7L1440,75L1440,200L1380,200C1320,200,1200,200,1080,200C960,200,840,200,720,200C600,200,480,200,360,200C240,200,120,200,60,200L0,200Z"></path>
+          </svg>
+        </div>
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
             <div className="sm:col-span-2 md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
@@ -242,6 +248,18 @@ function HeroSection() {
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
           backgroundSize: '60px 60px'
+        }} />
+        
+        {/* Subtle mountain silhouette - inspired by Seven Lakes landscape */}
+        <div className="absolute bottom-0 left-0 right-0 opacity-[0.08] pointer-events-none">
+          <svg viewBox="0 0 1440 320" className="w-full h-auto" preserveAspectRatio="none">
+            <path fill="rgba(255,255,255,0.3)" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
+        
+        {/* Subtle water reflection effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 opacity-[0.05] pointer-events-none" style={{
+          background: 'linear-gradient(180deg, transparent 0%, rgba(96, 165, 250, 0.3) 50%, rgba(59, 130, 246, 0.2) 100%)'
         }} />
       </div>
 
@@ -363,10 +381,11 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom wave */}
+      {/* Bottom wave - gentle water ripple */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path d="M0 60L1440 60L1440 30C1440 30 1200 0 720 0C240 0 0 30 0 30L0 60Z" fill="#f8fafc" />
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+          <path d="M0 80L1440 80L1440 45C1440 45 1320 30 1200 35C1080 40 960 55 840 50C720 45 600 25 480 30C360 35 240 55 120 50C60 47.5 0 40 0 40L0 80Z" fill="#f8fafc" />
+          <path d="M0 80L1440 80L1440 55C1440 55 1320 45 1200 50C1080 55 960 65 840 60C720 55 600 40 480 45C360 50 240 65 120 60C60 57.5 0 50 0 50L0 80Z" fill="#f8fafc" opacity="0.6" />
         </svg>
       </div>
     </section>
@@ -569,13 +588,15 @@ function CarRentalForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'statu
 
         {/* Selected Vehicle Preview */}
         <div className="modern-card-static overflow-hidden">
-          <div className="relative h-48 sm:h-52 md:h-64 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 overflow-hidden">
+          <div className="relative h-48 sm:h-52 md:h-64 overflow-hidden">
+            {/* Scenic gradient background - lake & sky inspired */}
+            <div className="absolute inset-0 bg-gradient-to-b from-sky-900/40 via-navy-800 to-navy-900" />
             <img
               src={vehicle.image}
               alt={vehicle.model}
-              className="w-full h-full object-cover opacity-80"
+              className="w-full h-full object-cover opacity-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/30 to-transparent" />
             <div className="absolute bottom-4 sm:bottom-5 left-4 sm:left-6 right-4 sm:right-6 flex items-end justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-amber-400 text-[10px] sm:text-xs font-semibold tracking-wider mb-1">SELECTED VEHICLE</p>
@@ -900,6 +921,12 @@ function CarpoolForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'status'
         {/* How it works banner */}
         <div className="bg-gradient-to-br from-navy-900 to-navy-800 p-6 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl" />
+          {/* Subtle landscape silhouette */}
+          <div className="absolute bottom-0 left-0 right-0 opacity-[0.06] pointer-events-none">
+            <svg viewBox="0 0 800 100" className="w-full h-auto" preserveAspectRatio="none">
+              <path fill="rgba(255,255,255,0.5)" d="M0,100L0,70Q100,50 200,65T400,55T600,70T800,60L800,100Z" />
+            </svg>
+          </div>
           <div className="relative">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-amber-400/10 border border-amber-400/20 rounded-xl flex items-center justify-center">
