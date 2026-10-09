@@ -27,10 +27,10 @@ interface Booking {
 
 // ==================== VEHICLE DATA ====================
 const vehicles = [
-  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, icon: '🚗' },
-  { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, icon: '🚙' },
-  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, icon: '🛻' },
-  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace', rate: 250, icon: '🚐' },
+  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, icon: '🚗', image: 'https://image.qwenlm.ai/generated-images/6d219663-426a-4bbd-b391-76df2c235d4a/_result.png' },
+  { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, icon: '🚙', image: 'https://image.qwenlm.ai/generated-images/a0f8054a-ce1e-4c96-932c-23ac6018dadd/_result.png' },
+  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, icon: '🛻', image: 'https://image.qwenlm.ai/generated-images/1ca5a39f-ab8d-4d93-a244-bc6ec99131bb/_result.png' },
+  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace', rate: 250, icon: '🚐', image: 'https://image.qwenlm.ai/generated-images/be0764bb-cc39-4a74-8da3-f4e1ae5f469f/_result.png' },
 ];
 
 const DRIVER_FEE = 100;
@@ -365,20 +365,57 @@ function CarRentalForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'statu
                 key={v.id}
                 type="button"
                 onClick={() => setSelectedVehicle(v.id)}
-                className={`p-4 rounded-xl border-2 transition-all text-center ${
+                className={`rounded-xl border-2 transition-all text-center overflow-hidden group ${
                   selectedVehicle === v.id
                     ? 'border-amber-400 bg-amber-50 ring-2 ring-amber-400/20'
                     : 'border-gray-200 hover:border-gray-300 hover:shadow-md'
                 }`}
               >
-                <div className="text-3xl mb-2">{v.icon}</div>
-                <p className="font-bold text-navy-900 text-sm">{v.name}</p>
-                <p className="text-xs text-gray-500 mb-2">{v.model}</p>
-                <span className="inline-block bg-navy-900 text-amber-400 text-xs font-bold px-3 py-1 rounded-full">
-                  ₱{v.rate}/hr
-                </span>
+                {/* Vehicle Image */}
+                <div className="relative h-36 bg-gradient-to-b from-gray-50 to-gray-100 overflow-hidden">
+                  <img
+                    src={v.image}
+                    alt={`${v.model} - ${v.name}`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {selectedVehicle === v.id && (
+                    <div className="absolute top-2 right-2 w-7 h-7 bg-amber-400 rounded-full flex items-center justify-center shadow-lg">
+                      <CheckCircle2 className="w-4 h-4 text-navy-900" />
+                    </div>
+                  )}
+                </div>
+                {/* Vehicle Info */}
+                <div className="p-4">
+                  <p className="font-bold text-navy-900 text-sm">{v.name}</p>
+                  <p className="text-xs text-gray-500 mb-2">{v.model}</p>
+                  <span className="inline-block bg-navy-900 text-amber-400 text-xs font-bold px-3 py-1 rounded-full">
+                    ₱{v.rate}/hr
+                  </span>
+                </div>
               </button>
             ))}
+          </div>
+        </div>
+
+        {/* Selected Vehicle Preview */}
+        <div className="bg-white rounded-2xl card-shadow overflow-hidden">
+          <div className="relative h-48 md:h-56 bg-gradient-to-r from-navy-900 to-navy-700 overflow-hidden">
+            <img
+              src={vehicle.image}
+              alt={vehicle.model}
+              className="w-full h-full object-cover opacity-90"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-6 right-6 flex items-end justify-between">
+              <div>
+                <p className="text-amber-400 text-sm font-medium">Selected Vehicle</p>
+                <p className="text-white text-2xl font-black">{vehicle.name}</p>
+                <p className="text-gray-300 text-sm">{vehicle.model}</p>
+              </div>
+              <div className="bg-amber-400 text-navy-900 font-black text-xl px-4 py-2 rounded-xl">
+                ₱{vehicle.rate}<span className="text-sm font-medium">/hr</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -918,8 +955,8 @@ function AdminDashboard({
                   return (
                     <tr key={v.id} className="border-b border-gray-100 hover:bg-gray-50">
                       <td className="py-3 px-2">
-                        <div className="flex items-center gap-2">
-                          <span className="text-xl">{v.icon}</span>
+                        <div className="flex items-center gap-3">
+                          <img src={v.image} alt={v.model} className="w-14 h-10 object-cover rounded-lg border border-gray-200" />
                           <div>
                             <p className="font-medium text-navy-900">{v.name}</p>
                             <p className="text-xs text-gray-500">{v.model}</p>
