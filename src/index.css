@@ -1,1 +1,55 @@
 @import "tailwindcss";
+
+@theme {
+  --color-navy-900: #0a1628;
+  --color-navy-800: #0f2040;
+  --color-navy-700: #152d54;
+  --color-navy-600: #1b3a68;
+  --color-navy-500: #234b85;
+  --color-amber-400: #f5a623;
+  --color-amber-500: #e8961f;
+  --color-amber-600: #d4850f;
+  --font-family-sans: 'Inter', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #0a1628 0%, #0f2040 40%, #152d54 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 24px rgba(10, 22, 40, 0.08), 0 1px 4px rgba(10, 22, 40, 0.04);
+}
+
+.card-shadow-lg {
+  box-shadow: 0 8px 40px rgba(10, 22, 40, 0.12), 0 2px 8px rgba(10, 22, 40, 0.06);
+}
+
+.amber-glow {
+  box-shadow: 0 4px 16px rgba(245, 166, 35, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
