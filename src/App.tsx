@@ -94,9 +94,11 @@ export default function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-11 h-11 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center shadow-lg shadow-amber-500/20">
-                  <Car className="w-5 h-5 text-navy-900" strokeWidth={2.5} />
-                </div>
+                <img 
+                  src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/615759206_122145608924952033_7423237554708199249_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHUTsqlnCyQ1usX-_piDaUdmH7bam9RcGeYfttqb1FwZ3QOyyq8diuibrGIzBrN-OEoeSMOk4zxeoxf3kCFK1YY&_nc_ohc=gB5m736SAlwQ7kNvwGcgs-a&_nc_oc=AdrLLhr8w0pL3PopoGx8JTHxmCvl0GybeyfYhra7a_a6zmy9a0z9D0zGzG2ACRyu9hw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=uFcf6ZLkBxTY-HtArGFnJw&_nc_ss=7b2a8&oh=00_AQOIaCGMlv9LIYmzSBXMhm9VgFHOdKZgnHYMjb16ICZN3A&oe=6ACE5C70"
+                  alt="Seven Lakes Car Rental Logo"
+                  className="w-11 h-11 rounded-2xl object-cover shadow-lg shadow-amber-500/20"
+                />
                 <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border-2 border-white" />
               </div>
               <div>
@@ -179,12 +181,14 @@ export default function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
             <div className="sm:col-span-2 md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
-                  <Car className="w-5 h-5 text-navy-900" strokeWidth={2.5} />
-                </div>
+                <img 
+                  src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/615759206_122145608924952033_7423237554708199249_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHUTsqlnCyQ1usX-_piDaUdmH7bam9RcGeYfttqb1FwZ3QOyyq8diuibrGIzBrN-OEoeSMOk4zxeoxf3kCFK1YY&_nc_ohc=gB5m736SAlwQ7kNvwGcgs-a&_nc_oc=AdrLLhr8w0pL3PopoGx8JTHxmCvl0GybeyfYhra7a_a6zmy9a0z9D0zGzG2ACRyu9hw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=uFcf6ZLkBxTY-HtArGFnJw&_nc_ss=7b2a8&oh=00_AQOIaCGMlv9LIYmzSBXMhm9VgFHOdKZgnHYMjb16ICZN3A&oe=6ACE5C70"
+                  alt="Seven Lakes Car Rental Logo"
+                  className="w-10 h-10 rounded-xl object-cover"
+                />
                 <div>
                   <h3 className="text-white font-bold">Seven Lakes Car Rental</h3>
-                  <p className="text-amber-400/60 text-xs">South Luzon, Philippines</p>
+                  <p className="text-amber-400/60 text-xs">San Pablo, Laguna</p>
                 </div>
               </div>
               <p className="text-sm leading-relaxed max-w-md">
@@ -246,11 +250,13 @@ function HeroSection() {
           {/* Left content */}
           <div className="text-center lg:text-left">
             {/* Brand lockup */}
-            <div className="inline-flex items-center gap-3 glass-dark rounded-full pl-2 pr-5 py-2 mb-8 animate-fade-in-up">
-              <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-500 rounded-lg flex items-center justify-center shadow-sm shadow-amber-500/30">
-                <Car className="w-4 h-4 text-navy-900" strokeWidth={2.5} />
-              </div>
-              <div className="h-5 w-px bg-white/15" />
+            <div className="inline-flex items-center gap-3 glass-dark rounded-full pl-1.5 pr-5 py-1.5 mb-8 animate-fade-in-up">
+              <img 
+                src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/615759206_122145608924952033_7423237554708199249_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHUTsqlnCyQ1usX-_piDaUdmH7bam9RcGeYfttqb1FwZ3QOyyq8diuibrGIzBrN-OEoeSMOk4zxeoxf3kCFK1YY&_nc_ohc=gB5m736SAlwQ7kNvwGcgs-a&_nc_oc=AdrLLhr8w0pL3PopoGx8JTHxmCvl0GybeyfYhra7a_a6zmy9a0z9D0zGzG2ACRyu9hw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=uFcf6ZLkBxTY-HtArGFnJw&_nc_ss=7b2a8&oh=00_AQOIaCGMlv9LIYmzSBXMhm9VgFHOdKZgnHYMjb16ICZN3A&oe=6ACE5C70"
+                alt="Seven Lakes Car Rental Logo"
+                className="w-10 h-10 rounded-xl object-cover"
+              />
+              <div className="h-6 w-px bg-white/15" />
               <div className="text-left leading-tight">
                 <p className="text-white text-sm font-bold tracking-tight">Seven Lakes</p>
                 <p className="text-amber-400/80 text-[10px] font-semibold tracking-[0.15em] uppercase">Car Rental</p>
