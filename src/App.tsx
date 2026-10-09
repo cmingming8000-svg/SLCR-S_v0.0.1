@@ -245,10 +245,16 @@ function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 glass-dark rounded-full px-4 py-2 mb-8 animate-fade-in-up">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span className="text-amber-400/90 text-xs font-medium tracking-wide">SOUTH LUZON'S #1 CAR RENTAL</span>
+            {/* Brand lockup */}
+            <div className="inline-flex items-center gap-3 glass-dark rounded-full pl-2 pr-5 py-2 mb-8 animate-fade-in-up">
+              <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-500 rounded-lg flex items-center justify-center shadow-sm shadow-amber-500/30">
+                <Car className="w-4 h-4 text-navy-900" strokeWidth={2.5} />
+              </div>
+              <div className="h-5 w-px bg-white/15" />
+              <div className="text-left leading-tight">
+                <p className="text-white text-sm font-bold tracking-tight">Seven Lakes</p>
+                <p className="text-amber-400/80 text-[10px] font-semibold tracking-[0.15em] uppercase">Car Rental</p>
+              </div>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
