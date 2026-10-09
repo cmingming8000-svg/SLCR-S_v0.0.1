@@ -85,21 +85,13 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] font-sans antialiased">
+    <div className="min-h-screen bg-[#f5f3ef] font-sans antialiased">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-top ${
         scrolled ? 'glass py-2.5 sm:py-3' : 'bg-transparent py-3 sm:py-5'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <img 
-                src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/615759206_122145608924952033_7423237554708199249_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHUTsqlnCyQ1usX-_piDaUdmH7bam9RcGeYfttqb1FwZ3QOyyq8diuibrGIzBrN-OEoeSMOk4zxeoxf3kCFK1YY&_nc_ohc=gB5m736SAlwQ7kNvwGcgs-a&_nc_oc=AdrLLhr8w0pL3PopoGx8JTHxmCvl0GybeyfYhra7a_a6zmy9a0z9D0zGzG2ACRyu9hw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=uFcf6ZLkBxTY-HtArGFnJw&_nc_ss=7b2a8&oh=00_AQOIaCGMlv9LIYmzSBXMhm9VgFHOdKZgnHYMjb16ICZN3A&oe=6ACE5C70"
-                alt="Seven Lakes Car Rental Logo"
-                className="w-12 h-12 rounded-full object-cover shadow-lg shadow-amber-500/20"
-              />
-            </div>
-            
+          <div className="flex items-center justify-center relative">
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1 glass-dark rounded-2xl p-1.5">
               {tabs.map((tab, i) => (
@@ -120,7 +112,7 @@ export default function App() {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden text-white p-2.5 rounded-xl glass-dark"
+              className="md:hidden absolute right-0 text-white p-2.5 rounded-xl glass-dark"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -381,8 +373,8 @@ function HeroSection() {
       {/* Bottom wave - gentle water ripple */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-          <path d="M0 80L1440 80L1440 45C1440 45 1320 30 1200 35C1080 40 960 55 840 50C720 45 600 25 480 30C360 35 240 55 120 50C60 47.5 0 40 0 40L0 80Z" fill="#f8fafc" />
-          <path d="M0 80L1440 80L1440 55C1440 55 1320 45 1200 50C1080 55 960 65 840 60C720 55 600 40 480 45C360 50 240 65 120 60C60 57.5 0 50 0 50L0 80Z" fill="#f8fafc" opacity="0.6" />
+          <path d="M0 80L1440 80L1440 45C1440 45 1320 30 1200 35C1080 40 960 55 840 50C720 45 600 25 480 30C360 35 240 55 120 50C60 47.5 0 40 0 40L0 80Z" fill="#f5f3ef" />
+          <path d="M0 80L1440 80L1440 55C1440 55 1320 45 1200 50C1080 55 960 65 840 60C720 55 600 40 480 45C360 50 240 65 120 60C60 57.5 0 50 0 50L0 80Z" fill="#f5f3ef" opacity="0.6" />
         </svg>
       </div>
     </section>
