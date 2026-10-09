@@ -85,7 +85,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f5f3ef] font-sans antialiased">
+    <div className="min-h-screen bg-[#edeae4] font-sans antialiased">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-top ${
         scrolled ? 'glass py-2.5 sm:py-3' : 'bg-transparent py-3 sm:py-5'
@@ -373,8 +373,8 @@ function HeroSection() {
       {/* Bottom wave - gentle water ripple */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-          <path d="M0 80L1440 80L1440 45C1440 45 1320 30 1200 35C1080 40 960 55 840 50C720 45 600 25 480 30C360 35 240 55 120 50C60 47.5 0 40 0 40L0 80Z" fill="#f5f3ef" />
-          <path d="M0 80L1440 80L1440 55C1440 55 1320 45 1200 50C1080 55 960 65 840 60C720 55 600 40 480 45C360 50 240 65 120 60C60 57.5 0 50 0 50L0 80Z" fill="#f5f3ef" opacity="0.6" />
+          <path d="M0 80L1440 80L1440 45C1440 45 1320 30 1200 35C1080 40 960 55 840 50C720 45 600 25 480 30C360 35 240 55 120 50C60 47.5 0 40 0 40L0 80Z" fill="#edeae4" />
+          <path d="M0 80L1440 80L1440 55C1440 55 1320 45 1200 50C1080 55 960 65 840 60C720 55 600 40 480 45C360 50 240 65 120 60C60 57.5 0 50 0 50L0 80Z" fill="#edeae4" opacity="0.6" />
         </svg>
       </div>
     </section>
