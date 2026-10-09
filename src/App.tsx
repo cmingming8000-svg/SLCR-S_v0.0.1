@@ -310,51 +310,39 @@ function HeroSection() {
               {/* Glow behind car */}
               <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-transparent rounded-3xl blur-2xl" />
               
-              {/* Main car image */}
-              <div className="relative glass-dark rounded-3xl p-6 overflow-hidden">
-                <div className="absolute top-4 right-4 flex items-center gap-2 bg-amber-400/20 border border-amber-400/30 rounded-full px-3 py-1.5">
-                  <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
-                  <span className="text-amber-400 text-xs font-semibold">Most Popular</span>
+              {/* Main car card */}
+              <div className="relative glass-dark rounded-3xl overflow-hidden">
+                {/* Most Popular badge - positioned above the image */}
+                <div className="flex items-center justify-between px-6 pt-5 pb-3">
+                  <div>
+                    <p className="text-white/50 text-xs font-medium tracking-wider">FEATURED VEHICLE</p>
+                    <p className="text-white font-bold text-xl">Toyota Avanza</p>
+                    <p className="text-white/50 text-sm">7-seater SUV</p>
+                  </div>
+                  <div className="flex items-center gap-2 bg-amber-400/20 border border-amber-400/30 rounded-full px-3 py-1.5">
+                    <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
+                    <span className="text-amber-400 text-xs font-semibold">Most Popular</span>
+                  </div>
                 </div>
                 <img
                   src={vehicles[1].image}
                   alt="Toyota Avanza"
-                  className="w-full h-64 object-cover rounded-2xl mb-4"
+                  className="w-full h-64 object-cover"
                 />
-                <div className="flex items-end justify-between">
-                  <div>
-                    <p className="text-white/50 text-xs font-medium mb-1">FEATURED VEHICLE</p>
-                    <p className="text-white font-bold text-xl">Toyota Avanza</p>
-                    <p className="text-white/50 text-sm">7-seater SUV</p>
+                <div className="px-6 py-5 flex items-center justify-between border-t border-white/5">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-1.5 text-white/60 text-xs">
+                      <Users className="w-3.5 h-3.5" />
+                      <span>7 seats</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-white/60 text-xs">
+                      <Fuel className="w-3.5 h-3.5" />
+                      <span>Gasoline</span>
+                    </div>
                   </div>
                   <div className="text-right">
                     <p className="text-amber-400 font-black text-2xl">₱200</p>
                     <p className="text-white/40 text-xs">per hour</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating badges */}
-              <div className="absolute -top-4 -left-4 glass-dark rounded-2xl p-3 animate-float">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-green-400/20 rounded-lg flex items-center justify-center">
-                    <Shield className="w-4 h-4 text-green-400" />
-                  </div>
-                  <div>
-                    <p className="text-white text-xs font-bold">Fully Insured</p>
-                    <p className="text-white/40 text-[10px]">All vehicles</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-4 -right-4 glass-dark rounded-2xl p-3 animate-float-slow">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-amber-400/20 rounded-lg flex items-center justify-center">
-                    <Award className="w-4 h-4 text-amber-400" />
-                  </div>
-                  <div>
-                    <p className="text-white text-xs font-bold">Top Rated</p>
-                    <p className="text-white/40 text-[10px]">South Luzon</p>
                   </div>
                 </div>
               </div>
