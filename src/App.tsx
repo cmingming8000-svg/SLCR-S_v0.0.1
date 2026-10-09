@@ -111,7 +111,7 @@ export default function App() {
                 <button
                   key={i}
                   onClick={() => setActiveTab(i)}
-                  className={`relative flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+                  className={`nav-button relative flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
                     activeTab === i
                       ? 'bg-gradient-to-br from-amber-400 to-amber-500 text-navy-900 shadow-lg shadow-amber-500/20'
                       : 'text-white/70 hover:text-white hover:bg-white/5'
@@ -135,21 +135,21 @@ export default function App() {
 
         {/* Mobile Nav */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-3 mx-5 glass-dark rounded-2xl p-2 animate-scale-in">
+          <div className="md:hidden mt-2 mx-4 glass-dark rounded-2xl p-2 animate-scale-in">
             {tabs.map((tab, i) => (
               <button
                 key={i}
                 onClick={() => { setActiveTab(i); setMobileMenuOpen(false); }}
-                className={`flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-sm font-medium transition-all ${
+                className={`flex items-center gap-3 w-full px-4 py-4 rounded-xl text-sm font-medium transition-all ${
                   activeTab === i
                     ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-navy-900'
                     : 'text-white/70 hover:text-white hover:bg-white/5'
                 }`}
               >
-                <tab.icon className="w-4 h-4" />
+                <tab.icon className="w-5 h-5" />
                 <div className="text-left">
-                  <p>{tab.label}</p>
-                  <p className={`text-[11px] ${activeTab === i ? 'text-navy-900/60' : 'text-white/40'}`}>{tab.desc}</p>
+                  <p className="font-semibold">{tab.label}</p>
+                  <p className={`text-xs ${activeTab === i ? 'text-navy-900/60' : 'text-white/40'}`}>{tab.desc}</p>
                 </div>
               </button>
             ))}
@@ -419,13 +419,13 @@ function CarRentalForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'statu
   return (
     <div className="animate-fade-in-up max-w-5xl mx-auto">
       {/* Section Header */}
-      <div className="text-center mb-10">
-        <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/50 rounded-full px-4 py-1.5 mb-4">
+      <div className="text-center mb-8 sm:mb-10">
+        <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/50 rounded-full px-3 sm:px-4 py-1.5 mb-4">
           <Zap className="w-3.5 h-3.5 text-amber-500" />
-          <span className="text-amber-700 text-xs font-semibold tracking-wide">QUICK BOOKING</span>
+          <span className="text-amber-700 text-[10px] sm:text-xs font-semibold tracking-wide">QUICK BOOKING</span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-3 tracking-tight">Car Rental Booking</h2>
-        <p className="text-gray-500 text-lg">Choose your vehicle and schedule your ride in minutes</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-navy-900 mb-3 tracking-tight">Car Rental Booking</h2>
+        <p className="text-gray-500 text-base sm:text-lg">Choose your vehicle and schedule your ride in minutes</p>
       </div>
 
       {submitted && (
@@ -875,13 +875,13 @@ function CarpoolForm({ onSubmit }: { onSubmit: (b: Omit<Booking, 'id' | 'status'
 
   return (
     <div className="animate-fade-in-up max-w-2xl mx-auto">
-      <div className="text-center mb-10">
-        <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/50 rounded-full px-4 py-1.5 mb-4">
+      <div className="text-center mb-8 sm:mb-10">
+        <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/50 rounded-full px-3 sm:px-4 py-1.5 mb-4">
           <Users className="w-3.5 h-3.5 text-amber-500" />
-          <span className="text-amber-700 text-xs font-semibold tracking-wide">SHARE & SAVE</span>
+          <span className="text-amber-700 text-[10px] sm:text-xs font-semibold tracking-wide">SHARE & SAVE</span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-3 tracking-tight">Carpool Booking</h2>
-        <p className="text-gray-500 text-lg">Share your ride, save on costs. Travel together!</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-navy-900 mb-3 tracking-tight">Carpool Booking</h2>
+        <p className="text-gray-500 text-base sm:text-lg">Share your ride, save on costs. Travel together!</p>
       </div>
 
       {submitted && (
@@ -1105,21 +1105,21 @@ function AdminDashboard({
   return (
     <div className="animate-fade-in-up space-y-6">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
         <div>
-          <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/50 rounded-full px-4 py-1.5 mb-3">
+          <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/50 rounded-full px-3 sm:px-4 py-1.5 mb-3">
             <BarChart3 className="w-3.5 h-3.5 text-amber-500" />
-            <span className="text-amber-700 text-xs font-semibold tracking-wide">ADMIN PANEL</span>
+            <span className="text-amber-700 text-[10px] sm:text-xs font-semibold tracking-wide">ADMIN PANEL</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-navy-900 tracking-tight">Dashboard</h2>
-          <p className="text-gray-500 text-lg mt-1">Manage bookings, vehicles, and schedules</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-navy-900 tracking-tight">Dashboard</h2>
+          <p className="text-gray-500 text-base sm:text-lg mt-1">Manage bookings, vehicles, and schedules</p>
         </div>
         <div className="flex items-center gap-3">
           <input
             type="month"
             value={selectedMonth}
             onChange={e => setSelectedMonth(e.target.value)}
-            className="modern-input w-auto"
+            className="modern-input w-auto text-sm"
           />
         </div>
       </div>
@@ -1135,20 +1135,22 @@ function AdminDashboard({
 
       {/* Calendar / Matrix */}
       <div className="modern-card-static p-6 md:p-8">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-navy-900 rounded-xl flex items-center justify-center">
-              <CalendarDays className="w-5 h-5 text-amber-400" />
-            </div>
-            <div>
-              <h3 className="font-bold text-navy-900">Vehicle Availability</h3>
-              <p className="text-xs text-gray-500">Track bookings across your fleet</p>
+        <div className="flex flex-col gap-4 mb-6">
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-navy-900 rounded-xl flex items-center justify-center shrink-0">
+                <CalendarDays className="w-5 h-5 text-amber-400" />
+              </div>
+              <div>
+                <h3 className="font-bold text-navy-900 text-sm sm:text-base">Vehicle Availability</h3>
+                <p className="text-xs text-gray-500">Track bookings across your fleet</p>
+              </div>
             </div>
           </div>
-          <div className="flex bg-gray-100 rounded-xl p-1">
+          <div className="flex bg-gray-100 rounded-xl p-1 w-full sm:w-auto">
             <button
               onClick={() => setViewMode('calendar')}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
                 viewMode === 'calendar' ? 'bg-white shadow-sm text-navy-900' : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -1156,7 +1158,7 @@ function AdminDashboard({
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
                 viewMode === 'list' ? 'bg-white shadow-sm text-navy-900' : 'text-gray-500 hover:text-gray-700'
               }`}
             >
