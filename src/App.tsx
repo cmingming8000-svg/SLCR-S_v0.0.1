@@ -29,10 +29,10 @@ interface Booking {
 
 // ==================== VEHICLE DATA ====================
 const vehicles = [
-  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/ef23c72b-3a84-48ed-8957-017307751863/_result.png' },
-  { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: 'https://image.qwenlm.ai/generated-images/b2c710ea-2a20-47f4-b20c-2e3e6ebe7850/_result.png' },
-  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/27ab7cc3-3b72-4446-b108-6973509d895b/_result.png' },
-  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace / Mitsubishi L300', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: 'https://image.qwenlm.ai/generated-images/0b66fd16-89b4-489a-b655-17b238d8acdf/_result.png' },
+  { id: 'sedan', name: 'Sedan', model: 'Mitsubishi Mirage', rate: 150, seats: 4, transmission: 'AT', fuel: 'Gasoline', image: '/images/mirage-sedan.png' },
+  { id: 'suv', name: 'SUV', model: 'Toyota Avanza', rate: 200, seats: 7, transmission: 'MT/AT', fuel: 'Gasoline', image: '/images/avanza-suv.png' },
+  { id: 'pickup', name: 'Pickup', model: 'Isuzu D-Max', rate: 200, seats: 5, transmission: 'MT/AT', fuel: 'Diesel', image: '/images/dmax-pickup.png' },
+  { id: 'van', name: 'Hiace Van / L300', model: 'Toyota Hiace / Mitsubishi L300', rate: 250, seats: 12, transmission: 'MT', fuel: 'Diesel', image: '/images/hiace-van.png' },
 ];
 
 const DRIVER_FEE = 100;
@@ -173,7 +173,7 @@ export default function App() {
             <div className="sm:col-span-2 md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <img 
-                  src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/615759206_122145608924952033_7423237554708199249_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHUTsqlnCyQ1usX-_piDaUdmH7bam9RcGeYfttqb1FwZ3QOyyq8diuibrGIzBrN-OEoeSMOk4zxeoxf3kCFK1YY&_nc_ohc=gB5m736SAlwQ7kNvwGcgs-a&_nc_oc=AdrLLhr8w0pL3PopoGx8JTHxmCvl0GybeyfYhra7a_a6zmy9a0z9D0zGzG2ACRyu9hw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=uFcf6ZLkBxTY-HtArGFnJw&_nc_ss=7b2a8&oh=00_AQOIaCGMlv9LIYmzSBXMhm9VgFHOdKZgnHYMjb16ICZN3A&oe=6ACE5C70"
+                  src="/images/logo.png"
                   alt="Seven Lakes Car Rental Logo"
                   className="w-12 h-12 rounded-full object-cover shadow-lg"
                 />
@@ -256,7 +256,7 @@ function HeroSection() {
             <div className="mb-8 animate-fade-in-up">
               <div className="inline-flex flex-col items-center lg:items-start gap-4">
                 <img 
-                  src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/615759206_122145608924952033_7423237554708199249_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHUTsqlnCyQ1usX-_piDaUdmH7bam9RcGeYfttqb1FwZ3QOyyq8diuibrGIzBrN-OEoeSMOk4zxeoxf3kCFK1YY&_nc_ohc=gB5m736SAlwQ7kNvwGcgs-a&_nc_oc=AdrLLhr8w0pL3PopoGx8JTHxmCvl0GybeyfYhra7a_a6zmy9a0z9D0zGzG2ACRyu9hw&_nc_zt=23&_nc_ht=scontent.fmnl16-1.fna&_nc_gid=uFcf6ZLkBxTY-HtArGFnJw&_nc_ss=7b2a8&oh=00_AQOIaCGMlv9LIYmzSBXMhm9VgFHOdKZgnHYMjb16ICZN3A&oe=6ACE5C70"
+                  src="/images/logo.png"
                   alt="Seven Lakes Car Rental Logo"
                   className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shadow-2xl shadow-amber-500/30 ring-4 ring-white/10"
                 />
