@@ -88,10 +88,10 @@ export default function App() {
     <div className="min-h-screen bg-[#edeae4] font-sans antialiased">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 safe-top ${
-        scrolled ? 'glass py-2.5 sm:py-3' : 'bg-transparent py-3 sm:py-5'
+        scrolled ? 'glass py-3 sm:py-3' : 'bg-transparent py-4 sm:py-5'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center relative">
+          <div className="flex items-center justify-center relative min-h-[44px]">
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1 glass-dark rounded-2xl p-1.5">
               {tabs.map((tab, i) => (
@@ -112,7 +112,7 @@ export default function App() {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden absolute right-0 text-white p-2.5 rounded-xl glass-dark"
+              className="md:hidden absolute right-0 text-white p-3 rounded-xl glass-dark"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
